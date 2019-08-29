@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int max = 0;
+	int index = 0;
+	for (int i = 0; i < 9; i++) {
+		int number;
+		cin >> number;
+		if (max < number) {
+			index = i + 1;
+			max = number;
+		}
+	}
+	cout << max << endl;
+	cout << index;
+	return 0;
+
+}
