@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int arr[8];
+
+string asc(int index) {
+	if (index == 7)
+		return "ascending";
+	if (arr[index + 1] - arr[index] == 1)
+		return asc(index + 1);
+	else {
+		return "mixed";
+	}
+}
+
+string desc(int index) {
+	if (index == 7)
+		return "descending";
+	if (arr[index] - arr[index+1] == 1)
+		return desc(index + 1);
+	else
+		return "mixed";
+}
+
+int main() {
+	for (int i = 0; i < 8; i++)
+		cin >> arr[i];
+	
+	if (arr[0] == 1) {
+		cout << asc(0);
+	}
+	else if (arr[0] == 8) {
+		cout << desc(0);
+	}
+	else
+		cout << "mixed";
+	
+	return 0;
+}
