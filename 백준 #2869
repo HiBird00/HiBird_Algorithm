@@ -1,0 +1,14 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a, b, v;
+	cin >> a >> b >> v;
+	double x = (double)(v - b) / (double)(a - b);
+	if (x - (int)x == 0)
+		cout << (int)x;
+	else
+		cout << (int)x + 1;
+	return 0;
+}
